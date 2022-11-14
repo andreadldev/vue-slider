@@ -21,16 +21,15 @@
                     <img :src="slides[activeIndex].image" :alt="slides[activeIndex].title" />
                     <div class="text">
                         <h3>{{slides[activeIndex].title}}</h3>
-                        <p>
-                            {{slides[activeIndex].text}}
+                        <p>{{slides[activeIndex].text}}
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="next"></div>
                     <div v-for="(slide, index) in slides" class="thumb">
-                        <img :src="slides[index].image" alt="slides[index].title" @click="prova" :class="activeIndex === index ? 'active' : '' "/>
+                        <img :src="slides[index].image" alt="slides[index].title" :class="activeIndex === index ? 'active' : '' "/>
                     </div>
                 </div>
 
@@ -39,7 +38,6 @@
 
     </div>
 
-    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
 </body>
 
