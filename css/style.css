@@ -50,8 +50,12 @@
     object-fit: cover;
 }
 
-.thumb.active {
-    border: 2px solid #ccc;
+.thumb img:not(.active) {
+    filter: brightness(50%);
+}
+
+.active {
+    border: 2px solid white;
     opacity: 1;
 }
 
